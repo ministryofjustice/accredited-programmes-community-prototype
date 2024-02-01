@@ -1,0 +1,37 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/index.html",
+  serviceName: "Accredited Programmes",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "/find/v2/find-design-history.html",
+      text: "Find"
+    },
+    {
+      href: "#2",
+      text: "Refer"
+    },
+    {
+      href: "#3",
+      text: "Assess"
+    },
+    {
+        href: "#4",
+        text: "Match"
+      },
+      {
+        href: "#5",
+        text: "Deliver"
+      }
+  ]
+}) }}
+{% endblock %}
