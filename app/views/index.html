@@ -1,93 +1,77 @@
 {% extends "layouts/main.html" %}
+{% set containerClasses = "moj-special-width-container" %}
 
-{% set pageName="Home" %}
+{% block pageTitle %}
+Digital Prison Services - {{ serviceName }} - GOV.UK Prototype Kit
+{% endblock %}
+
 
 {% block content %}
+<div class="moj-width-container">
+    <h1 class="govuk-heading-l">Accredited Programmes in Community</h1>
+    <p class="govuk-body-l"> A prototype for Accredited Programmes within the community setting</p>
+</div>
+<div class="homepage-content">
+    <div class="moj-width-container">
+        <ul class="govuk-grid-row card-group">
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="/find/v1/find-design-history.html">Find a programme</a>
+                    </h2>
+                    <p class="govuk-body card__description">Search for an Accredited Programme and make a referral.</p>
+                    <p>&nbsp;</p>
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#">Make a referral</a>
+                    </h2>
+                    <p class="govuk-body card__description">Look at your caseload and the status of referrals.</p>
+                    <p>&nbsp;</p>
+                </div>
+            </li>
+			<li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#">Assess a person</a>
+                    </h2>
+                    <p class="govuk-body card__description">Find Accredited Programmes, make referrals and view progress of  referrals.</p>
+                    <p>&nbsp;</p>
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="/match/v1/match-design-history.html">Match a person</a>
+                    </h2>
+                    <p class="govuk-body card__description">Create and manage programme groups.</p>
+                    <p>&nbsp;</p>
+                </div>
+            </li>
+            <li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#">Deliver a programme</a>
+                    </h2>
+                    <p class="govuk-body card__description">Example</p>
+                    <p>&nbsp;</p>
+                </div>
+            </li>
+			<li class="govuk-grid-column-one-third card-group__item">
+                <div class="card card--clickable">
+                    <h2 class="govuk-heading-m card__heading">
+                        <a class="govuk-link card__link govuk-link--no-visited-state" href="#">Monitor</a>
+                    </h2>
+                    <p class="govuk-body card__description">Add example content in here. Add example content in here. </p>
+					<p>&nbsp;</p>
+                </div>
+            </li>
+        </ul>
 
-<div class="govuk-width-container">
+       
 
-	<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-	  <div class="govuk-grid-row">
-	  <div class="govuk-grid-column-full">
-  
-		<h1 class="govuk-heading-l"> 
-		  Accredited Programmes in Community
-		</h1>
-  
-		<p class="govuk-body-l"> A prototype for Accredited Programmes within the community setting</p>
-            
-
-
-			 
-
-			</div>
-					</main>
-  
-	  
-	  </div>
-	  </div>
-  
-	  <div class="homepage-content">
-		<div class="moj-width-container">
-			<ul class="govuk-grid-row card-group govuk-!-margin-bottom-9">
-				<li class="govuk-grid-column-one-third card-group__item">
-					<div class="card card--clickable">
-						<h2 class="govuk-heading-m card__heading">
-							<a class="govuk-link card__link govuk-link--no-visited-state" href="/find/v1/find-design-history.html">Find a programme</a>
-						</h2>
-						<p class="govuk-body card__description">Search for an Accredited Programme and make a referral.</p>
-						<p>&nbsp;</p>
-					</div>
-				</li>
-				<li class="govuk-grid-column-one-third card-group__item">
-					<div class="card card--clickable">
-						<h2 class="govuk-heading-m card__heading">
-							<a class="govuk-link card__link govuk-link--no-visited-state" href="#">Make a referral</a>
-						</h2>
-						<p class="govuk-body card__description">Look at your caseload and the status of referrals.</p>
-					</div>
-				</li>
-				<li class="govuk-grid-column-one-third card-group__item">
-					<div class="card card--clickable">
-						<h2 class="govuk-heading-m card__heading">
-							<a class="govuk-link card__link govuk-link--no-visited-state" href="#">Assess a person</a>
-						</h2>
-						<p class="govuk-body card__description">Look at your caseload and the status of referrals.</p>
-					</div>
-				</li>
-				<li class="govuk-grid-column-one-third card-group__item">
-					<div class="card card--clickable">
-						<h2 class="govuk-heading-m card__heading">
-							<a class="govuk-link card__link govuk-link--no-visited-state" href="#">Match a person</a>
-						</h2>
-						<p class="govuk-body card__description">Look at your caseload and the status of referrals.</p>
-					</div>
-				</li>
-				<li class="govuk-grid-column-one-third card-group__item">
-					<div class="card card--clickable">
-						<h2 class="govuk-heading-m card__heading">
-							<a class="govuk-link card__link govuk-link--no-visited-state" href="#">Deliver a programme</a>
-						</h2>
-						<p class="govuk-body card__description">Look at your caseload and the status of referrals.</p>
-					</div>
-				</li>
-				<li class="govuk-grid-column-one-third card-group__item">
-					<div class="card card--clickable">
-						<h2 class="govuk-heading-m card__heading">
-							<a class="govuk-link card__link govuk-link--no-visited-state" href="#">Monitor</a>
-						</h2>
-						<p class="govuk-body card__description">Look at your caseload and the status of referrals.</p>
-					</div>
-				</li>
-			</ul>
-			<div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
-			<div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
-			<div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
-			<div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
-			<div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
-			<div class="faux-div govuk-!-margin-bottom-9">&nbsp;</div>
-		</div>
-	</div>
-  </div>
-
+    </div>
+</div>
 {% endblock %}
