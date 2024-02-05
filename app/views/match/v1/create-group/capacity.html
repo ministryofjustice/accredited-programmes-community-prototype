@@ -1,0 +1,43 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/task-list-standard"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/release-date-answer" method="post" novalidate>
+
+      <div class="govuk-form-group">
+        <span class="govuk-caption-l">Create a group</span>
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="event-name">
+            How many people can be allocated to this group?
+          </label>
+        </h1>
+        <p class="govuk-body">Enter the maximum number (known as capacity) of people who can be allocated.
+        </p>
+        <input class="govuk-input govuk-input--width-3" id="width-3" name="width3" type="text">
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}
