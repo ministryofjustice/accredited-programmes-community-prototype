@@ -1,0 +1,91 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/task-list-standard"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/release-date-answer" method="post" novalidate>
+
+      {% set dateHtml %}
+      {{ govukInput({
+        id: "date-of-release",
+        name: "date-of-release",
+        type: "date",
+        classes: "govuk-!-width-one-half",
+        label: {
+          text: "Expected date of release"
+        }
+      }) }}
+      {% endset -%}
+
+      {% set html %}
+      <p>
+        You can still submit your application.
+      </p>
+      <p>
+        An assessor will make a decision on suitability for an Approved Premises placement.
+      </p>
+      <p>If your application is suitable, you will need to request a placement as soon as you know the release date.</p>
+      {% endset %}
+
+      {% set noReleaseDate %}
+      {{ govukNotificationBanner({
+        html: html
+      }) }}
+      {% endset -%}
+
+
+      {{ govukRadios({
+        id: "release-date",
+        name: "release-date",
+        fieldset: {
+          legend: {
+            text: "Do you know the person's release date?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "release-date-known",
+            text: "Yes",
+            conditional: {
+              html: dateHtml
+            }
+          },
+          {
+            value: "release-date-unknown",
+            text: "No, the release date is to be determined by the parole board or other hearing",
+            conditional: {
+              html: noReleaseDate
+            }
+          }
+        ]
+      }) }}
+
+      <input type="hidden" name="answers-checked" value="true">
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

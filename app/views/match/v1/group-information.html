@@ -1,0 +1,707 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+  
+	{{ govukBackLink({
+		text: "Back",
+		href: "/match/v1/group-list"
+	}) }}
+	
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+	  <!-- Header -->
+		  <div class="govuk-grid-row">
+			<div class="govuk-grid-column-two-thirds">
+				<span class="govuk-caption-l">BBR/LEEDS/08/EVE/THURS/060723</span>
+				<h1 class="govuk-heading-xl govuk-!-margin-bottom-7">
+					Building better relationships
+				</h1>
+		
+				
+				<p class="govuk-body">Capacity: 15</p>
+				<p class="govuk-body">Allocated: 15</p>
+				<p class="govuk-body">Waitlist: 4</p>
+		
+
+				<details class="govuk-details">
+					<summary class="govuk-details__summary">
+					  <span class="govuk-details__summary-text">
+						Check the requirements for this programme
+					  </span>
+					</summary>
+					<div class="govuk-details__text">
+						<dl class="govuk-summary-list govuk-summary-list--no-borderr">
+							<div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+							  <dt class="govuk-summary-list__key">
+								Suitable for workplace risk assessment
+							  </dt>
+							  <dd class="govuk-summary-list__value">
+								Low, Medium or High		
+							 </dd>  
+							</div>
+							<div class="govuk-summary-list__row">
+							  <dt class="govuk-summary-list__key">
+								Suitable for incentive level
+							  </dt>
+							  <dd class="govuk-summary-list__value">
+								<p>Basic, Standard or Enhanced</p>
+												<p class="govuk-hint">
+													You can control which incentive levels are suitable by <a href="edit/pay-rates">adding or
+														removing corresponding pay rates</a>.
+												</p>
+							  </dd>
+							  
+							</div>
+							<div class="govuk-summary-list__row">
+							  <dt class="govuk-summary-list__key">
+								Education level
+							  </dt>
+							  <dd class="govuk-summary-list__value">
+								English level 1
+							  </dd>
+							  
+							</div>
+					  </dl></div>
+				  </details>
+			</div>
+
+		<div class="govuk-grid-column-one-third">
+			<h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+					Related tasks
+				</h2>
+				<ul class="govuk-list">
+					<li>
+						<a href="/create-group-name.html" class="govuk-link">
+							Add a person to this group
+						</a>
+					</li>
+
+				</ul>
+			</div>
+		
+
+		</div>
+  
+
+	
+
+		  
+	 <!-- Tabs -->
+
+		  <div class="govuk-tabs" data-module="govuk-tabs">
+			<h2 class="govuk-tabs__title">
+			  Contents
+			</h2>
+			<ul class="govuk-tabs__list">
+			  <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+				<a class="govuk-tabs__tab" href="#past-day">
+				  Currently allocated
+				</a>
+			  </li>
+			  <li class="govuk-tabs__list-item">
+				<a class="govuk-tabs__tab" href="#past-week">
+				  Waitlist
+				</a>
+			  </li>
+			  <li class="govuk-tabs__list-item">
+				<a class="govuk-tabs__tab" href="#past-month">
+				  Allocate a person
+				</a>
+			  </li>
+			</ul>
+			
+			<div class="govuk-tabs__panel" id="past-day">
+                    <h2 class="govuk-heading-l govuk-!-margin-bottom-5">
+                        12 people currently allocated
+                    </h2>
+
+                    <div class="govuk-button-group govuk-!-margin-bottom-5">
+                        <!-- <a href="deallocate" class="govuk-link" style="color: #be0e0e;">
+                            Remove people from this activity
+                        </a> -->
+                    </div>
+
+                    <table class="govuk-table govuk-!-margin-bottom-5" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header govuk-!-padding-right-2 govuk-!-padding-left-1" scope="col" id="select-all"></th>
+                                <th scope="col" class="govuk-table__header">Name</th>
+                                <th scope="col" class="govuk-table__header">CRN</th>
+                                <th scope="col" class="govuk-table__header">Allocation start and end</th>
+                                <th scope="col" class="govuk-table__header">Other allocations</th>
+                                <th scope="col" class="govuk-table__header">Earliest release date</th>
+                                <th scope="col" class="govuk-table__header"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                    <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox govuk-!-margin-right-2 govuk-!-margin-left-1">
+                                        <input type="checkbox" class="govuk-checkboxes__input" id="prisoner-1" name="selected-prisoners" value="AP9029D">
+                                        <label class="govuk-label govuk-checkboxes__label" for="prisoner-1">
+                                            <span class="govuk-visually-hidden">Select Capper,
+                                                Nicol</span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <b>
+                                        <a href="person-dashboard/person-dashboard.html" class="govuk-link--no-visited-state">
+                                            Capper, Nicol
+                                        </a>
+                                    </b>
+                                    <br>
+                                    AP9029D
+                                    <br>
+                                    1−1−8
+                                </td>
+                                <td class="govuk-table__cell">
+                                    
+                                    None
+                                    
+                                </td>
+                                <td class="govuk-table__cell">
+                                    14 May 2023
+                                    
+                                    <br>
+                                    to
+                                    15 Mar 2025
+                                    
+                                </td>
+                                <td class="govuk-table__cell">
+                                    
+                                    <span class="govuk-hint">None</span>
+                                    
+                                </td>
+                                <td class="govuk-table__cell">
+                                    15 Feb 2028
+                                </td>
+                            </tr>
+                            
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                    <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox govuk-!-margin-right-2 govuk-!-margin-left-1">
+                                        <input type="checkbox" class="govuk-checkboxes__input" id="prisoner-2" name="selected-prisoners" value="ZG2176A">
+                                        <label class="govuk-label govuk-checkboxes__label" for="prisoner-2">
+                                            <span class="govuk-visually-hidden">Select Castellani,
+                                                Bartie</span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <b>
+                                        <a href="#" class="govuk-link--no-visited-state">
+                                            Castellani, Bartie
+                                        </a>
+                                    </b>
+                                    <br>
+                                    ZG2176A
+                                    <br>
+                                    1−1−2
+                                </td>
+                                <td class="govuk-table__cell">
+                                    
+                                    None
+                                    
+                                </td>
+                                <td class="govuk-table__cell">
+                                    3 Mar 2023
+                                    
+                                </td>
+                                <td class="govuk-table__cell">
+                                    
+                                    <span class="govuk-hint">None</span>
+                                    
+                                </td>
+                                <td class="govuk-table__cell">
+                                    27 Sept 2035
+                                </td>
+                            </tr>
+                            
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                    <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox govuk-!-margin-right-2 govuk-!-margin-left-1">
+                                        <input type="checkbox" class="govuk-checkboxes__input" id="prisoner-3" name="selected-prisoners" value="XD6188J">
+                                        <label class="govuk-label govuk-checkboxes__label" for="prisoner-3">
+                                            <span class="govuk-visually-hidden">Select De Filippi,
+                                                Thornie</span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <b>
+                                        <a href="#" class="govuk-link--no-visited-state">
+                                            De Filippi, Thornie
+                                        </a>
+                                    </b>
+                                    <br>
+                                    XD6188J
+                                    <br>
+                                    1−3−5
+                                </td>
+                                <td class="govuk-table__cell">
+                                    
+                                    <ul class="govuk-list">
+                                        <li>
+											None
+                                        </li>
+                                    </ul>
+                                    <!-- <details class="govuk-details" data-module="govuk-details">
+                                        <summary class="govuk-details__summary">
+                                            <span class="govuk-details__summary-text">
+                                                3 non associations
+                                            </span>
+                                        </summary>
+                                        <div class="govuk-details__text">
+                                            <ul class="govuk-list">
+                                                <li><a href="#" class="govuk-link--no-visited-state">Jordan Johnson-Jones</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </details> -->
+                                    
+                                </td>
+                                <td class="govuk-table__cell">
+                                    5 May 2023
+                                    
+                                </td>
+                                <td class="govuk-table__cell">
+                                    
+                                    <ul class="govuk-list">
+										None
+                                    </ul>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    28 May 2031
+                                </td>
+                            </tr>
+                            
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                    <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox govuk-!-margin-right-2 govuk-!-margin-left-1">
+                                        <input type="checkbox" class="govuk-checkboxes__input" id="prisoner-4" name="selected-prisoners" value="IW8112X">
+                                        <label class="govuk-label govuk-checkboxes__label" for="prisoner-4">
+                                            <span class="govuk-visually-hidden">Select Flather,
+                                                Devlen</span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <b>
+                                        <a href="#" class="govuk-link--no-visited-state">
+                                            Flather, Devlen
+                                        </a>
+                                    </b>
+                                    <br>
+                                    IW8112X
+                                    <br>
+                                    2−3−19
+                                </td>
+                                <td class="govuk-table__cell">
+                                    
+                                    None
+                                    
+                                </td>
+                                <td class="govuk-table__cell">
+                                    14 Jan 2023
+                                    
+                                </td>
+                                <td class="govuk-table__cell">
+                                    
+                                    <ul class="govuk-list">
+                                        
+                                        <!-- don't show the allocation if it's the same as the current activity -->
+                                        
+                                        
+                                        <li><a href="../7" class="govuk-link--no-visited-state">Counseling Session</a></li>
+                                        
+                                        
+                                        <!-- don't show the allocation if it's the same as the current activity -->
+                                        
+                                        
+                                        <li><a href="../54" class="govuk-link--no-visited-state">Addiction Support Group</a></li>
+                                        
+                                        
+                                    </ul>
+                                    
+                                </td>
+                                <td class="govuk-table__cell">
+                                    2 Nov 2028
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+			</div>
+			<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+			  <h2 class="govuk-heading-m">Waitlist</h2>
+			  <table class="govuk-table" data-module="moj-sortable-table">
+
+				<thead class="govuk-table__head">
+				  <tr class="govuk-table__row">
+			  
+					<th scope="col" class="govuk-table__header" aria-sort="ascending">Group</th>
+			  
+					<th scope="col" class="govuk-table__header" aria-sort="none">Programme</th>
+	
+					<th scope="col" class="govuk-table__header" aria-sort="none">Start date</th>
+	
+					<th scope="col" class="govuk-table__header" aria-sort="none">End date</th>
+			  
+					<th scope="col" class="govuk-table__header" aria-sort="none">Capacity</th>
+			  
+					<th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">Waitlist</th>
+			  
+				  </tr>
+				</thead>
+			  
+				<tbody class="govuk-table__body">
+			  
+				  <tr class="govuk-table__row">
+			  
+					<td class="govuk-table__cell">BBR/LEEDS/02/EVE/THURS/180124</td>
+			  
+					<td class="govuk-table__cell" data-sort-value="6961">
+						<strong class="govuk-tag govuk-tag--purple">
+							Building Better Relationships
+						</strong>
+					</td>
+			  
+					<td class="govuk-table__cell">14 Feb 24</td>
+			  
+					<td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897">14 May 24</td>
+	
+					<td class="govuk-table__cell">10</td>
+	
+					<td class="govuk-table__cell">2</td>
+			  
+				  </tr>
+			  
+				  <tr class="govuk-table__row">
+			  
+					<td class="govuk-table__cell">BBR/HUDS/01/EVE/MON/180923</td>
+			  
+					<td class="govuk-table__cell" data-sort-value="6194">
+						<strong class="govuk-tag govuk-tag--purple">
+							Building Better Relationships
+						</strong>
+					</td>
+			  
+					<td class="govuk-table__cell">24 Feb 24</td>
+			  
+					<td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1913">26 May 24</td>
+					
+					<td class="govuk-table__cell">11</td>
+	
+					<td class="govuk-table__cell">2</td>
+			  
+				  </tr>
+			  
+				  <tr class="govuk-table__row">
+			  
+					<td class="govuk-table__cell" a href="">
+						BBR/LEEDS/08/EVE/THURS/060723
+					</td>
+			  
+					<td class="govuk-table__cell" data-sort-value="5642">
+						<strong class="govuk-tag govuk-tag--purple">
+							Building Better Relationships
+						</strong>
+					</td>
+			  
+					<td class="govuk-table__cell">16 Feb 14</td>
+			  
+					<td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1874">16 May 24</td>
+			  
+					<td class="govuk-table__cell">15</td>
+	
+					<td class="govuk-table__cell">2</td>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>
+			<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+			  <h2 class="govuk-heading-l">Find a person to allocate to this group</h2>
+			  
+			  <div class="govuk-grid-row">
+				<div class="govuk-grid-column-two-thirds">
+					<div class="moj-search govuk-!-margin-top-4">
+
+						<div class="govuk-form-group">
+							<label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="name">
+								Search by name or CRN
+							</label>
+							<input class="govuk-input moj-search__input " id="name" name="search" type="search" value="">
+						</div>
+						<button class="govuk-button moj-search__button" data-module="govuk-button">
+							Search
+						</button>
+					</div>
+				</div>
+			</div>
+			<table class="govuk-table govuk-!-margin-top-5" id="list">
+				<caption class="govuk-table__caption govuk-table__caption--m">
+					390 people
+					available for allocation
+				</caption>
+				<thead class="govuk-table__head">
+					<tr class="govuk-table__row">
+						<th scope="col" class="govuk-table__header" aria-sort="none">Prisoner</th>
+						<th scope="col" class="govuk-table__header" aria-sort="ascending">Non-associations</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Current allocation</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Education level held</th>
+						<th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+						<th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">Other waitlists</th>
+						<th scope="col" class="govuk-table__header"></th>
+					</tr>
+				</thead>
+				<tbody class="govuk-table__body">
+					
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">
+							<a href="../../../prisoner/GH4911Z" class="govuk-link--no-visited-state govuk-!-display-block"><b>Gori</b>,
+								Hubey</a>
+							<span class="govuk-hint govuk-!-font-size-16 govuk-!-display-block govuk-!-margin-0">GH4911Z</span>
+							<span class="govuk-hint govuk-!-font-size-16 govuk-!-display-block govuk-!-margin-0">1−1−3</span>
+						</td>
+						<td class="govuk-table__cell" data-sort-value="">
+							
+							<span class="govuk-hint">None</span>
+							
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<!-- 
+								
+								
+								<li><a href="../23" class="govuk-link--no-visited-state">Printing Class</a></li>
+								
+								
+								<li><a href="../11" class="govuk-link--no-visited-state">English Skills Class</a></li>
+								 -->
+								<li><span class="govuk-hint">None</span></li>
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								
+								<li>English level 1</li>
+								
+							</ul>
+						</td>
+						<td class="govuk-table__cell" data-sort-value="2027-04-29">
+							29 Apr 2027
+						</td>
+						<td class="govuk-table__cell" data-sort-value="2027-04-29" style="text-align: center;">
+							<ul class="govuk-list">
+								
+								<li>0</li>
+								
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<a href="../1/allocate/GH4911Z" class="govuk-link--no-visited-state">Allocate</a>
+						</td>
+					</tr>
+					
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">
+							<a href="../../../prisoner/KJ6418O" class="govuk-link--no-visited-state govuk-!-display-block"><b>Alderman</b>,
+								Thatcher</a>
+							<span class="govuk-hint govuk-!-font-size-16 govuk-!-display-block govuk-!-margin-0">KJ6418O</span>
+							<span class="govuk-hint govuk-!-font-size-16 govuk-!-display-block govuk-!-margin-0">1−1−4</span>
+						</td>
+						<td class="govuk-table__cell" data-sort-value="">
+							
+							<span class="govuk-hint">None</span>
+							
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<!-- 
+								<span class="govuk-hint">None</span>
+								
+								 -->
+								<li><span class="govuk-hint">None</span></li>
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								
+								<li>English level 1</li>
+								
+							</ul>
+						</td>
+						<td class="govuk-table__cell" data-sort-value="2024-10-22">
+							22 Oct 2024
+						</td>
+						<td class="govuk-table__cell" data-sort-value="2024-10-22" style="text-align: center;">
+							<ul class="govuk-list">
+								
+								<li>0</li>
+								
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<a href="../1/allocate/KJ6418O" class="govuk-link--no-visited-state">Allocate</a>
+						</td>
+					</tr>
+					
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">
+							<a href="../../../prisoner/RX5657Y" class="govuk-link--no-visited-state govuk-!-display-block"><b>Easom</b>,
+								Brant</a>
+							<span class="govuk-hint govuk-!-font-size-16 govuk-!-display-block govuk-!-margin-0">RX5657Y</span>
+							<span class="govuk-hint govuk-!-font-size-16 govuk-!-display-block govuk-!-margin-0">1−1−5</span>
+						</td>
+						<td class="govuk-table__cell" data-sort-value="">
+							
+							<span class="govuk-hint">None</span>
+							
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<!-- 
+								
+								
+								<li><a href="../11" class="govuk-link--no-visited-state">English Skills Class</a></li>
+								 -->
+								<li><span class="govuk-hint">None</span></li>
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								
+								<li><span class="govuk-hint">N/A</span></li>
+								
+							</ul>
+						</td>
+						<td class="govuk-table__cell" data-sort-value="2027-06-30">
+							30 Jun 2027
+						</td>
+						<td class="govuk-table__cell" data-sort-value="2027-06-30" style="text-align: center;">
+							<ul class="govuk-list">
+								
+								<li>1</li>
+								
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<a href="../1/allocate/RX5657Y" class="govuk-link--no-visited-state">Allocate</a>
+						</td>
+					</tr>
+					
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">
+							<a href="../../../prisoner/GQ8843H" class="govuk-link--no-visited-state govuk-!-display-block"><b>Victor</b>,
+								Itch</a>
+							<span class="govuk-hint govuk-!-font-size-16 govuk-!-display-block govuk-!-margin-0">GQ8843H</span>
+							<span class="govuk-hint govuk-!-font-size-16 govuk-!-display-block govuk-!-margin-0">1−1−2</span>
+						</td>
+						<td class="govuk-table__cell" data-sort-value="">
+							
+							<a href="#" class="govuk-link--no-visited-state">Joe Bloggs</a>
+							
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<!-- 
+								
+								
+								<li><a href="../27" class="govuk-link--no-visited-state">Small Works Team</a></li>
+								 -->
+								<li><span class="govuk-hint">None</span></li>
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								
+								<li>English level 1</li>
+								
+							</ul>
+						</td>
+						<td class="govuk-table__cell" data-sort-value="2027-04-12">
+							12 Apr 2027
+						</td>
+						<td class="govuk-table__cell" data-sort-value="2027-04-12" style="text-align: center;">
+							<ul class="govuk-list">
+								
+								<li>1</li>
+								
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<a href="../1/allocate/GQ8843H" class="govuk-link--no-visited-state">Allocate</a>
+						</td>
+					</tr>
+					
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">
+							<a href="../../../prisoner/OE0455U" class="govuk-link--no-visited-state govuk-!-display-block"><b>Sissel</b>,
+								Lammond</a>
+							<span class="govuk-hint govuk-!-font-size-16 govuk-!-display-block govuk-!-margin-0">OE0455U</span>
+							<span class="govuk-hint govuk-!-font-size-16 govuk-!-display-block govuk-!-margin-0">1−1−1</span>
+						</td>
+						<td class="govuk-table__cell" data-sort-value="">
+							
+							<ul class="govuk-list">
+								<li><a href="#" class="govuk-link--no-visited-state">Joe Bloggs</a></li>
+								<li><a href="#" class="govuk-link--no-visited-state">Bob Smith</a></li>
+							</ul>
+							
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<!-- 
+								
+								
+								<li><a href="../5" class="govuk-link--no-visited-state">Christian Service</a></li>
+								
+								
+								<li><a href="../17" class="govuk-link--no-visited-state">Maths Skills Class</a></li>
+								 -->
+								<li><span class="govuk-hint">None</span></li>
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								
+								<li><span class="govuk-hint">N/A</span></li>
+								
+							</ul>
+						</td>
+						<td class="govuk-table__cell" data-sort-value="2042-03-10">
+							10 Mar 2042
+						</td>
+						<td class="govuk-table__cell" data-sort-value="2042-03-10" style="text-align: center;">
+							<ul class="govuk-list">
+								
+								<li>1</li>
+								
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<a href="../1/allocate/OE0455U" class="govuk-link--no-visited-state">Allocate</a>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+			</div>
+			
+
+
+		  
+		  
+  
+	</main>
+  </div>
+
+{% endblock %}
