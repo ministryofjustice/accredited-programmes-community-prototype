@@ -1,0 +1,36 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+	  <div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+	  
+		  <form action="/capacity" method="post" novalidate>
+	  
+			<div class="govuk-form-group">
+			  <span class="govuk-caption-l">Create a group</span>
+			  <h1 class="govuk-label-wrapper">
+				<label class="govuk-label govuk-label--l" for="event-name">
+				  Enter the location of this group
+				</label>
+			  </h1>
+			 
+			  <input class="govuk-input govuk-input" type="text">
+			</div>
+			
+
+			{{ govukButton({
+				text: "Continue",
+				href: "../group-list"
+			  }) }}
+		
+	  
+		  </form>
+	  
+		</div>
+	  </div>
+
+{% endblock %}
