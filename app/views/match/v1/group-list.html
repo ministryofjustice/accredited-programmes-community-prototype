@@ -1,4 +1,4 @@
-{% extends "layouts/hmpps.html" %}
+{% extends "layouts/main.html" %}
 
 {% set pageName="Home" %}
 
@@ -21,22 +21,10 @@
 	  
 		  <div class="govuk-grid-row">
 			<div class="govuk-grid-column-two-thirds">
-				<!-- <span class="govuk-caption-l">Manage group</span> -->
+				<span class="govuk-caption-l">Manage allocations</span> 
 				<h1 class="govuk-heading-xl govuk-!-margin-bottom-7">
-					[Group name]
+					View groups
 				</h1>
-		
-				<p class="govuk-body-l">
-					All programme groups
-				</p>
-		
-				<!-- <p>
-					You can view or edit details for a single activity, or you can select multiple activities to pause, archive or delete them.
-				</p> -->
-		
-				<!-- <p>
-					<a href="../create-activity" class="govuk-button govuk-button--secondar">Create an activity</a>
-				</p> -->
 			</div>
 		
 			<div class="govuk-grid-column-one-third">
@@ -45,7 +33,7 @@
 				</h2>
 				<ul class="govuk-list">
 					<li>
-						<a href="/create-group/create-group-name" class="govuk-link govuk-link--no-visited-state">
+						<a href="create-group/select-programme.html" class="govuk-link govuk-link--no-visited-state">
 							Create a group
 						</a>
 					</li>
@@ -62,7 +50,7 @@
 				</li>
 			  
 				<li class="moj-sub-navigation__item">
-				  <a class="moj-sub-navigation__link" href="#">Current programmes</a>
+				  <a class="moj-sub-navigation__link" href="#">Current</a>
 				</li>
 			  </ul>
 		  
@@ -73,47 +61,34 @@
 			<thead class="govuk-table__head">
 			  <tr class="govuk-table__row">
 		  
-				<th scope="col" class="govuk-table__header" aria-sort="ascending">Group</th>
+				<th scope="col" class="govuk-table__header" aria-sort="ascending">Group name</th>
 		  
-				<th scope="col" class="govuk-table__header" width="20%" aria-sort="none">Programme</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Programme</th>
 
-				<th scope="col" class="govuk-table__header" width="15%" aria-sort="none">Start date</th>
+				<th scope="col" class="govuk-table__header" aria-sort="none">Start date</th>
 
 				<th scope="col" class="govuk-table__header" aria-sort="none">End date</th>
 		  
-				<th scope="col" class="govuk-table__header" aria-sort="none">Capacity</th>
-		  
-				<th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">Waitlist</th>
-		  
+				<th scope="col" class="govuk-table__header" aria-sort="none">Number of spaces</th>
 			  </tr>
 			</thead>
 		  
 			<tbody class="govuk-table__body">
-		  
 			  <tr class="govuk-table__row">
-		  
 				<td class="govuk-table__cell">
 					<a href="#">
 						BBR/LEEDS/02/EVE/THURS/180124
 					</a>
 				</td>
-		  
 				<td class="govuk-table__cell" data-sort-value="6961">
 					<strong class="govuk-tag govuk-tag--purple">
-						Building Better Relationships
+						BBR
 					</strong>
 				</td>
-		  
 				<td class="govuk-table__cell">14 Feb 24</td>
-		  
 				<td class="govuk-table__cell" data-sort-value="1897">14 May 24</td>
-
 				<td class="govuk-table__cell">10</td>
-
-				<td class="govuk-table__cell">2</td>
-		  
 			  </tr>
-		  
 			  <tr class="govuk-table__row">
 		  
 				<td class="govuk-table__cell">
@@ -121,42 +96,28 @@
 						BBR/HUDS/01/EVE/MON/180923
 					</a>
 				</td>
-		  
 				<td class="govuk-table__cell" data-sort-value="6194">
-					<strong class="govuk-tag govuk-tag--purple">
-						Building Better Relationships
+					<strong class="govuk-tag govuk-tag--orange">
+						TSP
 					</strong>
 				</td>
-		  
 				<td class="govuk-table__cell">24 Feb 24</td>
-		  
 				<td class="govuk-table__cell" data-sort-value="1913">26 May 24</td>
-				
 				<td class="govuk-table__cell">11</td>
-
-				<td class="govuk-table__cell">2</td>
-		  
 			  </tr>
 		  
 			  <tr class="govuk-table__row">
-		  
 				<td class="govuk-table__cell">
 					<a href="/match/v1/group-information"> BBR/LEEDS/08/EVE/THURS/060723  </p>
 				</td>
-		  
 				<td class="govuk-table__cell" data-sort-value="5642">
 					<strong class="govuk-tag govuk-tag--purple">
-						Building Better Relationships
+						BBR
 					</strong>
 				</td>
-		  
 				<td class="govuk-table__cell">16 Feb 14</td>
-		  
 				<td class="govuk-table__cell" data-sort-value="1874">16 May 24</td>
-		  
 				<td class="govuk-table__cell">15</td>
-
-				<td class="govuk-table__cell">2</td>
 			  </tr>
 			</tbody>
 		  </table>

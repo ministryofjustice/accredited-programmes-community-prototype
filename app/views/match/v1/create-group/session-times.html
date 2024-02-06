@@ -18,22 +18,23 @@
 
     <form action="/release-date-answer" method="post" novalidate>
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <span class="govuk-caption-l">Create a group</span>
-            <h1 class="govuk-fieldset__heading">
-             When does this group start?
-            </h1>
-          </legend>
-          <div id="passport-issued-hint" class="govuk-hint">
-            For example, 27 3 2007
-          </div>
+
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <span class="govuk-caption-l">Create a group</span>
+        <h1 class="govuk-fieldset__heading">
+          What time will the session(s) run?
+        </h1>
+      </legend>
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example, 9am
+      </div>
+
           <div class="govuk-date-input" id="passport-issued">
+            <h1 class="govuk-heading-s">Start time</h1>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
                 <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                  Day
+                  Hour
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
               </div>
@@ -41,28 +42,38 @@
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
                 <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                  Month
+                  Minute
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
               </div>
             </div>
+          </div>
+
+          <div class="govuk-date-input" id="passport-issued">
+            <h1 class="govuk-heading-s">End time</h1>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                  Year
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Hour
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Minute
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
               </div>
             </div>
           </div>
         </fieldset>
-      </div>
-
-      <input type="hidden" name="answers-checked" value="true">
+      
 
       {{ govukButton({
         text: "Continue",
-        href: "length-of-group"
+        href: "group-location"
       }) }}
 
     </form>

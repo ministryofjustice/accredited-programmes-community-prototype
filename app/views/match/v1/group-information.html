@@ -18,57 +18,46 @@
 	  <!-- Header -->
 		  <div class="govuk-grid-row">
 			<div class="govuk-grid-column-two-thirds">
-				<span class="govuk-caption-l">BBR/LEEDS/08/EVE/THURS/060723</span>
+				<span class="govuk-caption-l">Manage groups</span>
 				<h1 class="govuk-heading-xl govuk-!-margin-bottom-7">
-					Building better relationships
+					BBR/LEEDS/08
 				</h1>
 		
-				
-				<p class="govuk-body">Capacity: 15</p>
-				<p class="govuk-body">Allocated: 15</p>
-				<p class="govuk-body">Waitlist: 4</p>
-		
-
-				<details class="govuk-details">
-					<summary class="govuk-details__summary">
-					  <span class="govuk-details__summary-text">
-						Check the requirements for this programme
-					  </span>
-					</summary>
-					<div class="govuk-details__text">
-						<dl class="govuk-summary-list govuk-summary-list--no-borderr">
-							<div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-							  <dt class="govuk-summary-list__key">
-								Suitable for workplace risk assessment
-							  </dt>
-							  <dd class="govuk-summary-list__value">
-								Low, Medium or High		
-							 </dd>  
-							</div>
-							<div class="govuk-summary-list__row">
-							  <dt class="govuk-summary-list__key">
-								Suitable for incentive level
-							  </dt>
-							  <dd class="govuk-summary-list__value">
-								<p>Basic, Standard or Enhanced</p>
-												<p class="govuk-hint">
-													You can control which incentive levels are suitable by <a href="edit/pay-rates">adding or
-														removing corresponding pay rates</a>.
-												</p>
-							  </dd>
-							  
-							</div>
-							<div class="govuk-summary-list__row">
-							  <dt class="govuk-summary-list__key">
-								Education level
-							  </dt>
-							  <dd class="govuk-summary-list__value">
-								English level 1
-							  </dd>
-							  
-							</div>
-					  </dl></div>
-				  </details>
+				<dl class="govuk-summary-list">
+					<div class="govuk-summary-list__row">
+					  <dt class="govuk-summary-list__key">
+						Day and time
+					  </dt>
+					  <dd class="govuk-summary-list__value">
+						<p class="govuk-body">Monday - 1pm - 3pm </p>
+						<p class="govuk-body">Thursday - 2pm - 4pm</p>
+					  </dd>
+					</div>
+					<div class="govuk-summary-list__row">
+					  <dt class="govuk-summary-list__key">
+						Location
+					  </dt>
+					  <dd class="govuk-summary-list__value">
+						Briardale Center, Blyth
+					  </dd>
+					</div>
+					<div class="govuk-summary-list__row">
+					  <dt class="govuk-summary-list__key">
+						Start date
+					  </dt>
+					  <dd class="govuk-summary-list__value">
+						24 March 2024
+					  </dd>
+					</div>
+					<div class="govuk-summary-list__row">
+					  <dt class="govuk-summary-list__key">
+						End date
+					  </dt>
+					  <dd class="govuk-summary-list__value">
+						<p class="govuk-body">24 June 2024</p>
+					  </dd>
+					</div>
+				  </dl>
 			</div>
 
 		<div class="govuk-grid-column-one-third">
@@ -77,8 +66,13 @@
 				</h2>
 				<ul class="govuk-list">
 					<li>
-						<a href="/create-group-name.html" class="govuk-link">
+						<a href="#" class="govuk-link">
 							Add a person to this group
+						</a>
+					</li>
+					<li>
+						<a href="../v1/create-group/select-programme.html" class="govuk-link">
+							Update group
 						</a>
 					</li>
 
@@ -101,7 +95,7 @@
 			<ul class="govuk-tabs__list">
 			  <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
 				<a class="govuk-tabs__tab" href="#past-day">
-				  Currently allocated
+				  Allocated
 				</a>
 			  </li>
 			  <li class="govuk-tabs__list-item">
@@ -111,7 +105,7 @@
 			  </li>
 			  <li class="govuk-tabs__list-item">
 				<a class="govuk-tabs__tab" href="#past-month">
-				  Allocate a person
+				  Removed
 				</a>
 			  </li>
 			</ul>
@@ -131,12 +125,12 @@
                         <thead class="govuk-table__head">
                             <tr class="govuk-table__row">
                                 <th class="govuk-table__header govuk-!-padding-right-2 govuk-!-padding-left-1" scope="col" id="select-all"></th>
-                                <th scope="col" class="govuk-table__header">Name</th>
-                                <th scope="col" class="govuk-table__header">CRN</th>
-                                <th scope="col" class="govuk-table__header">Allocation start and end</th>
-                                <th scope="col" class="govuk-table__header">Other allocations</th>
-                                <th scope="col" class="govuk-table__header">Earliest release date</th>
-                                <th scope="col" class="govuk-table__header"></th>
+                                <th scope="col" class="govuk-table__header">Name / CRN</th>
+                                <th scope="col" class="govuk-table__header">RoSH</th>
+                                <th scope="col" class="govuk-table__header">Ethnicity</th>
+                                <th scope="col" class="govuk-table__header">Relevant offending</th>
+                                <th scope="col" class="govuk-table__header">Needs</th>
+                                <th scope="col" class="govuk-table__header">Strengths</th>
                             </tr>
                         </thead>
                         <tbody class="govuk-table__body">
@@ -159,13 +153,11 @@
                                     </b>
                                     <br>
                                     AP9029D
-                                    <br>
-                                    1−1−8
                                 </td>
                                 <td class="govuk-table__cell">
-                                    
-                                    None
-                                    
+									<strong class="govuk-tag govuk-tag--green">
+										low
+									</strong>
                                 </td>
                                 <td class="govuk-table__cell">
                                     14 May 2023
@@ -182,6 +174,9 @@
                                 </td>
                                 <td class="govuk-table__cell">
                                     15 Feb 2028
+                                </td>
+								<td class="govuk-table__cell">
+                                   
                                 </td>
                             </tr>
                             
@@ -203,13 +198,11 @@
                                     </b>
                                     <br>
                                     ZG2176A
-                                    <br>
-                                    1−1−2
                                 </td>
                                 <td class="govuk-table__cell">
-                                    
-                                    None
-                                    
+									<strong class="govuk-tag govuk-tag--red">
+										HIGH
+									</strong>
                                 </td>
                                 <td class="govuk-table__cell">
                                     3 Mar 2023
@@ -222,6 +215,9 @@
                                 </td>
                                 <td class="govuk-table__cell">
                                     27 Sept 2035
+                                </td>
+								<td class="govuk-table__cell">
+                                   
                                 </td>
                             </tr>
                             
@@ -247,26 +243,9 @@
                                     1−3−5
                                 </td>
                                 <td class="govuk-table__cell">
-                                    
-                                    <ul class="govuk-list">
-                                        <li>
-											None
-                                        </li>
-                                    </ul>
-                                    <!-- <details class="govuk-details" data-module="govuk-details">
-                                        <summary class="govuk-details__summary">
-                                            <span class="govuk-details__summary-text">
-                                                3 non associations
-                                            </span>
-                                        </summary>
-                                        <div class="govuk-details__text">
-                                            <ul class="govuk-list">
-                                                <li><a href="#" class="govuk-link--no-visited-state">Jordan Johnson-Jones</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </details> -->
-                                    
+									<strong class="govuk-tag govuk-tag--orange">
+										MEDIUM
+									</strong>        
                                 </td>
                                 <td class="govuk-table__cell">
                                     5 May 2023
@@ -280,6 +259,9 @@
                                 </td>
                                 <td class="govuk-table__cell">
                                     28 May 2031
+                                </td>
+								<td class="govuk-table__cell">
+                                   
                                 </td>
                             </tr>
                             
@@ -305,35 +287,22 @@
                                     2−3−19
                                 </td>
                                 <td class="govuk-table__cell">
-                                    
-                                    None
-                                    
+									<strong class="govuk-tag govuk-tag--red">
+										HIGH
+									</strong>
                                 </td>
                                 <td class="govuk-table__cell">
                                     14 Jan 2023
                                     
                                 </td>
                                 <td class="govuk-table__cell">
-                                    
-                                    <ul class="govuk-list">
-                                        
-                                        <!-- don't show the allocation if it's the same as the current activity -->
-                                        
-                                        
-                                        <li><a href="../7" class="govuk-link--no-visited-state">Counseling Session</a></li>
-                                        
-                                        
-                                        <!-- don't show the allocation if it's the same as the current activity -->
-                                        
-                                        
-                                        <li><a href="../54" class="govuk-link--no-visited-state">Addiction Support Group</a></li>
-                                        
-                                        
-                                    </ul>
-                                    
+									None
                                 </td>
                                 <td class="govuk-table__cell">
                                     2 Nov 2028
+                                </td>
+								<td class="govuk-table__cell">
+                                   
                                 </td>
                             </tr>
 
@@ -659,14 +628,7 @@
 						</td>
 						<td class="govuk-table__cell">
 							<ul class="govuk-list">
-								<!-- 
-								
-								
-								<li><a href="../5" class="govuk-link--no-visited-state">Christian Service</a></li>
-								
-								
-								<li><a href="../17" class="govuk-link--no-visited-state">Maths Skills Class</a></li>
-								 -->
+							
 								<li><span class="govuk-hint">None</span></li>
 							</ul>
 						</td>
@@ -689,6 +651,9 @@
 						</td>
 						<td class="govuk-table__cell">
 							<a href="../1/allocate/OE0455U" class="govuk-link--no-visited-state">Allocate</a>
+						</td>
+						<td class="govuk-table__cell">
+                                   
 						</td>
 					</tr>
 					
