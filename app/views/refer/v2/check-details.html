@@ -24,7 +24,7 @@ Confirm Del Hatton's details - {{ serviceName }} - GOV.UK Prototype Kit
 				<dd class="govuk-summary-list__value">Del Hatton</dd>
 			</div>
 			<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Prison number</dt>
+				<dt class="govuk-summary-list__key">CRN</dt>
 				{% if data['person-identifier'] == "D0168GH" %}
 				<dd class="govuk-summary-list__value">D0168GH</dd>
 				{% else %}
@@ -44,24 +44,24 @@ Confirm Del Hatton's details - {{ serviceName }} - GOV.UK Prototype Kit
 				<dd class="govuk-summary-list__value">Male</dd>
 		  	</div>
 		  	<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Setting</dt>
-				<dd class="govuk-summary-list__value">Custody</dd>
+				<dt class="govuk-summary-list__key">Sentence type</dt>
+				<dd class="govuk-summary-list__value">Community order</dd>
 	  		</div>
 	  		<div class="govuk-summary-list__row">
-				<dt class="govuk-summary-list__key">Current prison</dt>
-				<dd class="govuk-summary-list__value">HMP Erlestoke</dd>
+				<dt class="govuk-summary-list__key">Probation office</dt>
+				<dd class="govuk-summary-list__value">Leeds</dd>
   			</div>
 		</dl>
 		<div class="govuk-warning-text">
 			<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
 			<strong class="govuk-warning-text__text">
 				<span class="govuk-warning-text__assistive">Warning</span>
-				If this information is out of date or incorrect, you must update the information in NOMIS.
+				If this information is out of date or incorrect, you must update the information in ndelius.
 			</strong>
 		</div>
 		<div class="govuk-button-group govuk-!-margin-top-4">
 			<a class="govuk-button" href="task-list">Continue</a>
-			<a class="govuk-link" href="persons-identifier">Enter a different identifier</a>
+			<a class="govuk-link" href="persons-identifier">Enter a different CRN</a>
 		</div>
     </div>
 </div>
